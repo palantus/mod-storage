@@ -56,6 +56,13 @@ StorageModule.prototype.onMessage = function (req, callback) {
 		callback({error: "Invalid request"});
 		return;
 	}
+
+	this.get(req.body.key, function(err, val){
+		if(val.allowClient == true)
+			callback(val);
+		else
+			callback({error: "Not allowed from client"});
+	})
 }
 
 StorageModule.prototype.get = function(key, callback){
