@@ -1,0 +1,9 @@
+{
+	"name": "ahk-mod-storage",
+	"version": "1.0.0",
+	"dependencies" : {
+		"jsonpack" : "*",
+		"line-by-line" : "*",
+		"rwlock" : "*"
+	}
+}
